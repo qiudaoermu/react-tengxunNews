@@ -1,0 +1,12 @@
+.firstNewsContent{
+    width: 700px;
+    float: left;
+
+}
+.footerNewsContent{
+    width: 1000px;
+    margin: 0 auto;
+}
+.firstNewsContent li{
+    list-style: square;
+}
