@@ -21,7 +21,7 @@ export default class ComponentRight extends React.Component{
 
         var _this = this;
         $.ajax({
-            url:"/api/user/signup",
+            url:"newComponent.json",
 
             type:"get",
             async:'false'

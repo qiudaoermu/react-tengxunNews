@@ -22,15 +22,15 @@ export default  class NewsNavS extends React.Component{
         var _this = this;
         var newdateArr="";
         $.ajax({
-            url:"/api/user/newsList",
+            url:"a.json",
 
-            type:"post",
+            type:"get",
             async:false,
             data:{targetData:0}
         }).done(function(data){
 
             console.log( $.type(data))
-            newdateArr = data.data
+            newdateArr = data
             //_this.setState({newsData:data})
             _this.setState({
                 list2:newdateArr
@@ -54,15 +54,15 @@ export default  class NewsNavS extends React.Component{
         var newdateArr="";
         var _this = this
         $.ajax({
-            url:"/api/user/newsList",
+            url:"a.json",
 
-            type:"post",
+            type:"get",
             async:false,
             data:{targetData:targetData}
         }).done(function(data){
 
             console.log( $.type(data))
-            newdateArr = data.data
+            newdateArr = data
             //_this.setState({newsData:data})
             _this.setState({
                 list2:newdateArr

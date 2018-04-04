@@ -11,20 +11,25 @@ module.exports = {
 
 
     entry: {
-        page1: ['./index.js', hotMiddlewareScript],
-        page2: ['./detial.js', hotMiddlewareScript]
+        main: ['./index.js']
     },
 
 
     output: {
         path: path.resolve(__dirname, './public/__build__'),
-        filename: './[name]/bundle.js',
-        publicPath: publicPath
+        filename: 'bundle.js',
+        publicPath: "dist/"
 
     },
     devServer: {
-        inline: true,
-        port: 8099
+      // contentBase: './static',
+        contentBase: [path.join(__dirname, ".")], // 本地服务器 加载页面 所在的目录
+        // port:7000,
+        host: '127.0.0.1',
+        port: 8099,
+        //port: serverConfig.port,
+        //host: serverConfig.host,
+        hot: true // 服务器热加载
     },
     devtool: 'source-map',
     module: {
