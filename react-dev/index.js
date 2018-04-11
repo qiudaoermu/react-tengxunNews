@@ -23,5 +23,5 @@ class Index extends React.Component{
         )
     }
 }
-
-ReactDOM.render(<Index/>,document.getElementById('main'));
+console.log(ReactDOM.render(<Index/>,document.getElementById('main')))
+console.log(ReactDOM.render(<Index/>,document.getElementById('main')));

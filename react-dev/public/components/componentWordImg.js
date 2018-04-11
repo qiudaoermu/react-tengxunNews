@@ -7,7 +7,7 @@ export default class WordImg extends React.Component{
     constructor(){
         super()
 
-        var newdateArr = "badiu"
+        var newdateArr = "badiu";
 
         var _this = this;
         $.ajax({
@@ -17,11 +17,9 @@ export default class WordImg extends React.Component{
             async:false
         }).done(function(data){
 
-            console.log( $.type(data))
             newdateArr = data
             //_this.setState({newsData:data})
-        })
-        console.log(newdateArr)
+        });
         this.state={
             newsData:newdateArr,
             content:[
@@ -49,8 +47,8 @@ export default class WordImg extends React.Component{
      /*  event.stopPropagation()
        if(event.target.className!="shareButton"){return}
        event.preventDefault()*/
-       var index =  event.currentTarget.getAttribute("data")
-       console.log("index"+index)
+       var index =  event.currentTarget.getAttribute("data");
+       console.log("index"+index);
        this.setState({realShow:index})
 
 
@@ -73,7 +71,7 @@ export default class WordImg extends React.Component{
     }
     showImgChild(event){
         var index =  event.target.getAttribute("data");
-        console.log(index)
+
         this.setState({realShow:index})
     }
 

@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c0226d95736e5b76f705"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "53ff6fe5b6b7709f9411"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -10000,6 +10000,7 @@ var ReactMount = {
     // Various parts of our code (such as ReactCompositeComponent's
     // _renderValidatedComponent) assume that calls to render aren't nested;
     // verify that that's the case.
+      console.log(process.env.NODE_ENV)
     process.env.NODE_ENV !== 'production' ? warning(ReactCurrentOwner.current == null, '_renderNewRootComponent(): Render methods should be a pure function ' + 'of props and state; triggering nested component updates from ' + 'render is not allowed. If necessary, trigger nested updates in ' + 'componentDidUpdate. Check the render method of %s.', ReactCurrentOwner.current && ReactCurrentOwner.current.getName() || 'ReactCompositeComponent') : void 0;
 
     !isValidContainer(container) ? process.env.NODE_ENV !== 'production' ? invariant(false, '_registerComponent(...): Target container is not a DOM element.') : _prodInvariant('37') : void 0;
@@ -10334,7 +10335,8 @@ var Index = function (_React$Component) {
     return Index;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Index, null), document.getElementById('main'));
+console.log(ReactDOM.render(React.createElement(Index, null), document.getElementById('main')));
+console.log(ReactDOM.render(React.createElement(Index, null), document.getElementById('main')));
 
 /***/ }),
 /* 85 */
@@ -23165,11 +23167,9 @@ var WordImg = function (_React$Component) {
             async: false
         }).done(function (data) {
 
-            console.log($.type(data));
             newdateArr = data;
             //_this.setState({newsData:data})
         });
-        console.log(newdateArr);
         _this2.state = {
             newsData: newdateArr,
             content: [{ item: '内容一' }, { item: '内容二' }, { item: '内容三' }],
@@ -23220,7 +23220,7 @@ var WordImg = function (_React$Component) {
         key: "showImgChild",
         value: function showImgChild(event) {
             var index = event.target.getAttribute("data");
-            console.log(index);
+
             this.setState({ realShow: index });
         }
     }, {
@@ -23364,9 +23364,6 @@ var ComponentRight = function (_React$Component) {
                 type: "get",
                 async: 'false'
             }).done(function (data) {
-
-                console.log($.type(data));
-
                 _this.setState({ newsData: data });
             });
         }
@@ -23543,7 +23540,6 @@ var NewsNavS = function (_React$Component) {
                 data: { targetData: 0 }
             }).done(function (data) {
 
-                console.log($.type(data));
                 newdateArr = data;
                 //_this.setState({newsData:data})
                 _this.setState({
@@ -23603,7 +23599,6 @@ var NewsNavS = function (_React$Component) {
                     "ul",
                     { className: "navSUl" },
                     this.state.list.map(function (val, index) {
-                        console.log(val);
 
                         return _react2.default.createElement(
                             "li",

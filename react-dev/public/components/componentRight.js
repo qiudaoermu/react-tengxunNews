@@ -26,9 +26,6 @@ export default class ComponentRight extends React.Component{
             type:"get",
             async:'false'
         }).done(function(data){
-
-            console.log( $.type(data))
-
             _this.setState({newsData:data})
         })
     }

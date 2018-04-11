@@ -29,7 +29,7 @@ export default  class NewsNavS extends React.Component{
             data:{targetData:0}
         }).done(function(data){
 
-            console.log( $.type(data))
+
             newdateArr = data
             //_this.setState({newsData:data})
             _this.setState({
@@ -76,7 +76,6 @@ export default  class NewsNavS extends React.Component{
                 <div style={{clear:'both',float:'left'}}>
                     <ul className="navSUl">
                     {this.state.list.map((val,index)=>{
-                            console.log(val)
 
                                 return(
                                     <li key={index} className={this.currentClass(val,index)}
