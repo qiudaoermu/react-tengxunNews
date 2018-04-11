@@ -1,4 +1,10 @@
-/**
+webpackHotUpdate(0,{
+
+/***/ 12:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
  * This source code is licensed under the MIT license found in the
@@ -6,18 +12,18 @@
  *
  */
 
-'use strict';
 
-var _prodInvariant = require('./reactProdInvariant'),
-    _assign = require('object-assign');
 
-var CallbackQueue = require('./CallbackQueue');
-var PooledClass = require('./PooledClass');
-var ReactFeatureFlags = require('./ReactFeatureFlags');
-var ReactReconciler = require('./ReactReconciler');
-var Transaction = require('./Transaction');
+var _prodInvariant = __webpack_require__(3),
+    _assign = __webpack_require__(4);
 
-var invariant = require('fbjs/lib/invariant');
+var CallbackQueue = __webpack_require__(62);
+var PooledClass = __webpack_require__(16);
+var ReactFeatureFlags = __webpack_require__(63);
+var ReactReconciler = __webpack_require__(19);
+var Transaction = __webpack_require__(29);
+
+var invariant = __webpack_require__(1);
 
 var dirtyComponents = [];
 var updateBatchNumber = 0;
@@ -92,7 +98,7 @@ PooledClass.addPoolingTo(ReactUpdatesFlushTransaction);
 
 function batchedUpdates(callback, a, b, c, d, e) {
   ensureInjected();
-  console.log(b)
+  console.log(callback+","+a)
   return batchingStrategy.batchedUpdates(callback, a, b, c, d, e);
 }
 
@@ -247,3 +253,9 @@ var ReactUpdates = {
 };
 
 module.exports = ReactUpdates;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ })
+
+})
+//# sourceMappingURL=0.26b99021c9de1d58943c.hot-update.js.map

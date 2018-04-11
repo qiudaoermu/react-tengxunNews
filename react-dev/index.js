@@ -11,15 +11,12 @@ import  Comonentfooter from './public/components/footer'
 class Index extends React.Component{
 
     render(){
-
         return(
             <div className="main">
                 <ComonentHeader/>
                 <ComonentBody/>
                 <Comonentfooter/>
-
             </div>
-
         )
     }
 }
